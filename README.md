@@ -11,6 +11,7 @@ cp .env.example .env              # or export MONGO_URI / MONGO_DB; real environ
 python sample_seed.py             # optional: the nine sample documents
 uvicorn app.main:app --port 8000
 ```
+Once it is running, open http://127.0.0.1:8000/docs to try the endpoints and http://127.0.0.1:8000/health to check it is ready. The root URL `/` returns 404 on purpose: the contract defines no home page.
 Requires MongoDB 6.0+ (developed for 7.0). Indexes are created at startup, idempotently; no manual steps.
 `MONGO_URI` is required; `MONGO_DB` defaults to `attendance_db`.
 
