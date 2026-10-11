@@ -16,6 +16,7 @@ Requires MongoDB 6.0+ (developed for 7.0). Indexes are created at startup, idemp
 
 ## Check it
 ```bash
+pip install httpx2   # only needed for the self-check, not for the app
 MONGO_URI=mongodb://localhost:27017 python tests/selfcheck.py         # correctness, races, explain plans
 MONGO_URI=mongodb://localhost:27017 python tests/selfcheck.py --big   # + ~140k records and timings
 ```
